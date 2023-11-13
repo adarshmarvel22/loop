@@ -154,7 +154,7 @@ The `generate_report` function extracts data from MongoDB, processes missing val
 4. Filter data within business hours.
 5. Interpolate uptime and downtime based on available data.
 6. Extrapolate values for the entire business hours interval.
-7. Save the report to the MongoDB collection (`report_table`).
+7. Save the report to the MongoDB collection with the generated report_id (`report_data_csv`).
 
 ## Report Generation Task (`tasks.py`)
 

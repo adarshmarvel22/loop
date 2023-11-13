@@ -61,8 +61,6 @@ def generate_report(report_id):
 
     logging.info("Assume default values for missing data")
     # Assume default values for missing data
-    # business_hours_data = business_hours_data.fillna({'start_time_local': pd.Timestamp('00:00:00'), 'end_time_local': pd.Timestamp('23:59:59')})
-    # timezones_data = timezones_data.fillna({'timezone_str': 'America/Chicago'})
     merged_data = merged_data.fillna({'start_time_local': '00:00:00', 'end_time_local': '23:59:59'})
     merged_data = merged_data.fillna({'timezone_str': 'America/Chicago'})
     merged_data = merged_data.fillna({'day': 0})
