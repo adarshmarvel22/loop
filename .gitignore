@@ -15,7 +15,6 @@ db.sqlite3
 # Virtual environment
 venv/
 env/
-ecr/
 
 # Ignore Django migration files
 **/migrations/*.py
