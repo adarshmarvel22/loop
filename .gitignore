@@ -1,0 +1,22 @@
+# .gitignore
+
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Database files
+db.sqlite3
+
+# Logs
+*.log
+
+# Virtual environment
+venv/
+env/
+ecr/
+
+# Ignore Django migration files
+**/migrations/*.py
+**/migrations/*.pyc

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Interaction Page</title>
+    <style>
+        #output {
+            padding: 10px; /* Add some padding for better visual appearance */
+            border: 2px solid #3498db; /* Border color, you can change it to your desired color */
+            border-radius: 8px; /* Add rounded corners */
+            background-color: #ecf0f1; /* Background color behind the text */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            display: inline-block; /* Display as inline-block to only take the necessary width */
+        }
+    </style>
+    
+</head>
+<body>
+
+    <h1>Hello, Welcome to {{ app }}</h1>
+
+    <h1>Report Interaction Page</h1>
+
+    <button onclick="triggerReport()">Trigger Report</button>
+
+    <br><br>
+    <label for="reportId">Report ID:</label>
+    <input type="text" id="reportId" name="reportId">
+    <button onclick="getReport()">Get Report</button>
+<br>
+    <div id="output"></div>
+    
+
+    <script>
+        function triggerReport() {
+            // Perform AJAX request to trigger_report endpoint
+            fetch('app/trigger_report/')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('output').innerHTML = `Report_id: ${data.report_id} <br> Status: ${data.status}`;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        function getReport() {
+            // Fetch report_id from input field
+            var reportId = document.getElementById('reportId').value;
+
+            // Perform AJAX request to get_report endpoint
+            fetch(`app/get_report/${reportId}/`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('output').innerHTML = `Status: ${data.status} <br> CSV Data: <br> ${data.csv_data}`;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</body>
+</html>
