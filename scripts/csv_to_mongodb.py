@@ -5,13 +5,13 @@ from pymongo import MongoClient
 mongo_uri = "mongodb+srv://adarshmsd1:helloworld@cluster0.nfvlsts.mongodb.net/store?retryWrites=true&w=majority"
 
 # CSV file path
-csv_file_path = r"C:\Users\adars\Downloads\business_hours.csv"
+csv_file_path = r"C:\Users\adars\Downloads\timezones.csv"
 
 # MongoDB database name
 database_name = "store"
 
 # MongoDB collection name
-collection_name = "business_hours"
+collection_name = "timezones"
 
 # Read CSV file into a pandas DataFrame
 df = pd.read_csv(csv_file_path)
