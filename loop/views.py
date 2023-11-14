@@ -1,7 +1,6 @@
 # Create your views here.
 # views.py
-from django.shortcuts import render
-from django.shortcuts import HttpResponse
+from django.shortcuts import render,HttpResponse
 from .utils import generate_report
 from pymongo import MongoClient
 
