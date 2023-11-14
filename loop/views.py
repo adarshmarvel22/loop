@@ -12,7 +12,7 @@ from rest_framework.decorators import api_view
 from .tasks import generate_report_task  #  Celery task for report generation
 
 # Connect to MongoDB
-mongo_uri = "mongodb+srv://adarshmsd1:helloworld@cluster0.nfvlsts.mongodb.net/store?retryWrites=true&w=majority"
+mongo_uri = "mongodb+srv://username:password@cluster0.nfvlsts.mongodb.net/store?retryWrites=true&w=majority"
 
 import logging
 # Configure logging

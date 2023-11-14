@@ -2,7 +2,7 @@ import pandas as pd
 from pymongo import MongoClient
 
 # MongoDB Atlas connection string
-mongo_uri = "mongodb+srv://adarshmsd1:helloworld@cluster0.nfvlsts.mongodb.net/store?retryWrites=true&w=majority"
+mongo_uri = "mongodb+srv://username:password@cluster0.nfvlsts.mongodb.net/store?retryWrites=true&w=majority"
 
 # CSV file path
 csv_file_path = r"C:\Users\adars\Downloads\timezones.csv"

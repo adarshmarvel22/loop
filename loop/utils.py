@@ -6,7 +6,7 @@ from .models import *
 from pymongo import MongoClient
 
 # Connect to MongoDB
-mongo_uri = "mongodb+srv://adarshmsd1:helloworld@cluster0.nfvlsts.mongodb.net/store?retryWrites=true&w=majority"
+mongo_uri = "mongodb+srv://username:password@cluster0.nfvlsts.mongodb.net/store?retryWrites=true&w=majority"
 
 import logging
 # Configure logging
