@@ -42,7 +42,7 @@ def trigger_report_view(request):
     
     logging.info(f"Report with report_id={report_id} created or updated successfully.")
     client.close()
-    return JsonResponse({'report_id': report_id, 'status':"Running"})
+    return JsonResponse({'report_id': report_id})
 
 # @api_view(['GET'])
 def get_report(request, report_id):

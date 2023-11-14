@@ -70,8 +70,7 @@ Feel free to customize the implementation based on your specific project structu
 
 ## Overview
 
-This document provides an overview and documentation for a Django-DRF (Django Rest Framework) based app designed to monitor restaurant online status. The app includes Celery for asynchronous task execution, Redis for task messaging, and MongoDB as the database to store relevant data.
-
+Overview and documentation for this Django-DRF (Django Rest Framework) based app designed to monitor restaurant online status. The app includes Celery for asynchronous task execution(the processing of the report generation), Redis for task messaging, and MongoDB as the database to store relevant data.
 
 
 - **`myproject/`**: Django project folder.
@@ -101,10 +100,11 @@ Contains utility functions, such as data extraction and report generation logic.
 1. Install required packages:
 
    ```bash
-   pip install django djangorestframework celery redis pymongo
+   pip install -r requirements.txt
    ```
 
 2. Start the MongoDB server.
+- Change the mongodb configurations (username and password of your mongodb database) in loop/urls.py, loop/tasks.py and loop/utils.py. The settings.py file of the Django-DRF can be configured to set the default database as mongoDB. Due to doubt in what type of database should I use and how it would get data in real time, I have used mongoDB connect and close code inside the required files
 
 3. Run Django migrations:
 

@@ -38,7 +38,7 @@
             fetch('app/trigger_report/')
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById('output').innerHTML = `Report_id: ${data.report_id} <br> Status: ${data.status}`;
+                    document.getElementById('output').innerHTML = `Report_id: ${data.report_id}`;
                 })
                 .catch(error => {
                     console.error('Error:', error);
